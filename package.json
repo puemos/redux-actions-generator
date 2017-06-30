@@ -10,6 +10,7 @@
     "babel-preset-es2015": "6.24.1"
   },
   "scripts": {
-    "build": "babel index.es.js --out-file index.js"
+    "build": "babel index.es.js --out-file index.js",
+    "precommit": "npm run build"
   }
 }
