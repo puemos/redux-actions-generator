@@ -1,0 +1,1 @@
+# redux-generate-actions
