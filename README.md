@@ -1,31 +1,50 @@
-# redux-generate-actions
+# redux-actions-generator
 
-generate actions object with a prefix
+Flux Standard Action type generator for Redux.
+
+[![NPM](https://nodei.co/npm/redux-actions-generator.png?downloads=true)](https://nodei.co/npm/redux-actions-generator/)
+
+## Installation
+
+The npm package provides a CommonJS build for use in Node.js, and with bundlers like Webpack and Browserify. It also includes an ES modules build that works well with Rollup and Webpack2's tree-shaking.
+
+```bash
+npm install --save redux-actions-generator
+```
+or
+```bash
+yarn add redux-actions-generator
+```
+
+## Usage
+### `createAction(prefix<string>, actions <Array<string>>)`
 
 ```js
-import reduxGenerateActions from 'redux-generate-actions';
+import createActions from 'redux-actions-generator';
 
-const actions = reduxGenerateActions('TODO', [
-    'ADD_TODO',
-    'TOGGLE_TODO',
-    'SET_VISIBILITY_FILTER',
-])
+const actions = createActions(
+    'TODO', 
+    [
+        'ADD_TODO',
+        'TOGGLE_TODO',
+        'SET_VISIBILITY_FILTER',
+    ]
+)
 
-// will produce:
-
-{
+expect(actions).to.deep.equal({
     ADD_TODO: 'TODO/ADD_TODO',
     TOGGLE_TODO: 'TODO/TOGGLE_TODO',
     SET_VISIBILITY_FILTER: 'TODO/SET_VISIBILITY_FILTER',
-}
+});
+
 ```
 
 ### Real world example
 #### `actions.js`
 ```js
-import reduxGenerateActions from 'redux-generate-actions';
+import createActions from 'redux-actions-generator';
 
-const actions = reduxGenerateActions('', [
+const actions = createActions('', [
     'ADD_TODO',
     'TOGGLE_TODO',
     'SET_VISIBILITY_FILTER',
