@@ -1,6 +1,6 @@
 {
   "name": "redux-actions-generator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "repository": "git@github.com:puemos/redux-actions-generator.git",
   "author": "Shy Alter",
