@@ -5,6 +5,14 @@
   "repository": "git@github.com:puemos/redux-generate-actions.git",
   "author": "Shy Alter",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "actions",
+    "redux",
+    "javascript",
+    "helper",
+    "generator"
+  ],
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-preset-es2015": "6.24.1",
